@@ -1,0 +1,22 @@
+{
+  "name": "launchpad-ui-tests",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "pretest": "npx ts-node src/helper/init.ts",
+    "test": "cucumber-js test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "typescript": "^5.6.2"
+  },
+  "devDependencies": {
+    "@cucumber/cucumber": "^11.0.1",
+    "@playwright/test": "^1.47.2",
+    "fs-extra": "^11.2.0",
+    "ts-node": "^10.9.2"
+  }
+}
