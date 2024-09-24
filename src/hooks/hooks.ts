@@ -1,17 +1,22 @@
 import { Before, After, BeforeAll, AfterAll, BeforeStep, AfterStep, Status } from "@cucumber/cucumber";
-import { Browser, BrowserContext, Page, chromium } from "@playwright/test";
+import { Browser, BrowserContext, LaunchOptions, Page, chromium } from "@playwright/test";
 import { pageConfig } from "./pageConfig";
 
 let page: Page;
 let browser: Browser;
 let context: BrowserContext;
 
+const options: LaunchOptions = {
+    headless: false,
+    args: ["--start-maximized"],
+}
+
 BeforeAll(async function () {
-    browser = await chromium.launch({headless: false});
+    browser = await chromium.launch(options);
 });
 
 Before(async function () {
-    context = await browser.newContext();
+    context = await browser.newContext({viewport: null});
     page = await context.newPage();
     pageConfig.page = page; 
 });
