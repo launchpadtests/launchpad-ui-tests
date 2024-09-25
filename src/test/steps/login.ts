@@ -4,14 +4,14 @@ import { pageConfig } from "../../hooks/pageConfig";
 
 Given('user navigates to the civic sync application', async function () {
     console.log("launching the browser.....")
-    await pageConfig.page.goto("https://civicsync-civicsysqa.civicsys.io/");
+    await pageConfig.page.goto("https://civicsync-civicsysqa.civicsys.io/?");
     console.log("browser launched successfully")
 });
 
 Given('login to the application with username as {string} and password as {string}', async function (username, password) {
-    await pageConfig.page.locator("(//input[@id='signInFormUsername'])[2]").fill(username);
-    await pageConfig.page.locator("(//input[@id='signInFormPassword'])[2]").fill(password);
-    await pageConfig.page.locator("(//input[@value='Sign in' and @type='Submit'])[2]").click();
+    await pageConfig.page.getByRole('textbox', { name: 'Username' }).fill(username);
+    await pageConfig.page.getByRole('textbox', { name: 'Password' }).fill(password);
+    await pageConfig.page.getByLabel('submit').last().click();
 });
 
 Then('verify that Civic sync web portal is launched', async function () {
