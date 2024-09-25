@@ -12,4 +12,3 @@ Feature: Verify Inspections and Citizens landing pages in Civic Sync application
   Scenario: Verify Citizens landing page
     When user selects "Citizens" landing page option
     Then verify that "Citizens" landing page is loaded
-    
