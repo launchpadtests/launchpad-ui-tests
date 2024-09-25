@@ -4,10 +4,10 @@
 This repository contains the automated UI tests for the Launchpad project. The tests are built using [TypeScript](https://www.typescriptlang.org/) and [Gherkin](https://cucumber.io/docs/gherkin/). It follows a behavior-driven development (BDD) approach. Cucumber is a popular behavior-driven development (BDD) tool that allows developers and stakeholders to collaborate on defining and testing application requirements in a human-readable format.
 
 There are 4 test scenarios in this project on "Civic Sync" application.
-Scenario #1: Verify "Inspections" landing page
-Scenario #2: Verify "Citizens" landing page
-Scenario #3: Create "Issue" case
-Scenario #4: Create "Citizen Registration" case
+1. Verify "Inspections" landing page
+2. Verify "Citizens" landing page
+3. Create "Issue" case
+4. Create "Citizen Registration" case
 
 ## Video Demo
 Refer demo videos below to understand the project structure and getting started with the setup and running the tests.
@@ -36,7 +36,7 @@ Ensure you have the following installed:
 1. Clone the repository:
    ```bash
    git clone https://github.com/launchpadtests/launchpad-ui-tests.git
-   
+
 2. Extract and open the project in the Visual Studio-Code (VS-Code)
 3. Install dependencies
     `npm i` to install the dependencies
