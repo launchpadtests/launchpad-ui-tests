@@ -15,6 +15,7 @@ Refer demo videos below to understand the project structure and getting started 
 1. Project Structure
 2. Set up and run the tests
 3. Reports and screenshot
+4. VS-Code set up to map features and steps
 
 ## Project Structure
 1. `src\test\features` -> Write your features here
@@ -38,8 +39,9 @@ Ensure you have the following installed:
    git clone https://github.com/launchpadtests/launchpad-ui-tests.git
 
 2. Extract and open the project in the Visual Studio-Code (VS-Code)
-3. Install dependencies
+3. Open the terminal in VS-Code editor
+4. Install dependencies
     `npm i` to install the dependencies
     `npx playwright install` to install the browsers    
-4. Run the tests 
+5. Run the tests 
     `npm run test` to execute the tests
