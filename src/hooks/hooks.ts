@@ -12,7 +12,7 @@ const options: LaunchOptions = {
     slowMo: 400
 }
 
-setDefaultTimeout(5 * 60000);
+setDefaultTimeout(10 * 1000);
 
 BeforeAll(async function () {
     browser = await chromium.launch(options);
