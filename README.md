@@ -17,6 +17,12 @@ Refer demo videos below to understand the project structure and getting started 
 3. Reports and screenshot
 4. VS-Code set up to map features and steps
 
+## Features
+
+1. Awesome report with screenshots for failed steps
+2. Parallel execution
+3. Scalable to use popular design patterns like Page Object Model (POM) 
+
 ## Project Structure
 1. `src\test\features` -> Write your features here
 2. `src\test\steps` -> Your step definitions goes here
