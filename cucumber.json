@@ -17,6 +17,6 @@
         "format":[
             "html:cucumber-report.html"
         ],
-        "parallel": 2
+        "parallel": 1
     }
 }
