@@ -10,12 +10,13 @@ There are 4 test scenarios in this project on "Civic Sync" application.
 4. Create "Citizen Registration" case
 
 ## Video Demo
-Refer demo videos below to understand the project structure and getting started with the setup and running the tests.
+Refer demo videos under [Demo-Videos directory] to understand the project structure and getting started with the setup and running the tests.
 
-1. Project Structure
-2. Set up and run the tests
-3. Reports and screenshot
-4. VS-Code set up to map features and steps
+1. Pre-requisite
+2. Repo Clone and VS Code Setup
+3. Project Structure and Executing the Tests
+4. Debug Failed Tests
+5. VS Code Editor and Cucumber Extension Settings
 
 ## Features
 
