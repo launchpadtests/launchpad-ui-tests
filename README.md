@@ -35,9 +35,12 @@ Refer demo videos below to understand the project structure and getting started 
 ## Getting Started
 
 ### Prerequisites
-Ensure you have the following installed:
-- [Node.js](https://nodejs.org/). This project is built using node v22.6.0
-- [npm](https://www.npmjs.com/). This project is built using npm v10.8.2 
+Ensure you have the following installed. Refer: https://nodejs.org/en/download/prebuilt-installer
+- [Node.js] This project is built using node v22.6.0. 
+- [npm] This project is built using npm v10.8.2 
+- [git] Refer: https://git-scm.com/downloads
+
+[Note] To run Playwright tests minimum node.js version required is >=18.
 
 ### Setup
 1. Clone the repository:
