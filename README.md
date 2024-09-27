@@ -41,7 +41,7 @@ Ensure you have the following installed. Refer: https://nodejs.org/en/download/p
 - [npm] This project is built using npm v10.8.2 
 - [git] Refer: https://git-scm.com/downloads
 
-[Note] To run Playwright tests minimum node.js version required is >=18.
+[Note] To run Playwright tests with cucumber node.js version required is 18 || 20 || >=22.
 
 ### Setup
 1. Clone the repository:
