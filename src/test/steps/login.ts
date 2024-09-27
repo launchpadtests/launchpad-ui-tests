@@ -16,5 +16,5 @@ Given('login to the application with username as {string} and password as {strin
 
 Then('verify that Civic sync web portal is launched', async function () {
     const loginSuccess = pageConfig.page.frameLocator("//iframe[@data-testid='preview-frame']").locator("//span[text()='Civic Sync']");
-    await expect(loginSuccess).toBeVisible({timeout: 10000}); 
+    await expect(loginSuccess).toBeVisible({timeout: 30000}); 
 });

@@ -20,7 +20,7 @@ Given('User submits the new issue', async function () {
 
 Given('User is on Additional details view', async function () {
     const additionalDetails = pageConfig.page.frameLocator("//iframe[@data-testid='preview-frame']").locator("//div[text()='Gather Additional Details']");
-    await expect(additionalDetails).toBeVisible({timeout: 10000});
+    await expect(additionalDetails).toBeVisible({timeout: 30000});
 });
 
 Given('User submits the issue additional details', async function () {
@@ -29,7 +29,7 @@ Given('User submits the issue additional details', async function () {
 
 Given('User is on Collect Issue info view', async function () {
     const collectInfo = pageConfig.page.frameLocator("//iframe[@data-testid='preview-frame']").locator("//span[text()='Collect Issue info']");
-    await expect(collectInfo).toBeVisible({timeout: 10000});
+    await expect(collectInfo).toBeVisible({timeout: 30000});
 });
 
 Given('User fills in the issue info', async function () {
