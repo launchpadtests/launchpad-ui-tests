@@ -27,10 +27,11 @@ Refer demo videos under [Demo-Videos directory] to understand the project struct
 ## Project Structure
 1. [`src\test\features`](src/test/features/) -> Write your features here
 2. [`src\test\steps`](src/test/steps/) -> Your step definitions goes here
-3. [`src\hooks\hooks.ts`](src/hooks/hooks.ts) -> Browser setup and teardown logic
-4. [`src\hooks\pageConfig.ts`](src/hooks/pageConfig.ts) -> Simple way to share the page objects to steps
-5. [`package.json`](package.json) -> Manages dependencies and scripts
-6. [`cucumber.json`](cucumber.json) -> cucumber configurations reqyired to run the tests
+3. [`src\test\user-settings.json`](src/test/user-settings.json) -> Provider application url, username and password in this file.
+4. [`src\hooks\hooks.ts`](src/hooks/hooks.ts) -> Browser setup and teardown logic
+5. [`src\hooks\pageConfig.ts`](src/hooks/pageConfig.ts) -> Simple way to share the page objects to steps
+6. [`package.json`](package.json) -> Manages dependencies and scripts
+7. [`cucumber.json`](cucumber.json) -> cucumber configurations reqyired to run the tests
 
 ## Getting Started
 
@@ -49,8 +50,9 @@ Ensure you have the following installed. Refer: https://nodejs.org/en/download/p
 
 2. Extract and open the project in the Visual Studio-Code (VS-Code)
 3. Open the terminal in VS-Code editor
-4. Install dependencies
+4. Ensure [`src\test\user-settings.json`](src/test/user-settings.json) file is updated with applicationurl, username and password
+5. Install dependencies
     `npm i` to install the dependencies
     `npx playwright install` to install the browsers    
-5. Run the tests 
+6. Run the tests 
     `npm run test` to execute the tests
