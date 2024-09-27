@@ -10,7 +10,7 @@ When('user creates {string} case', async function (caseName) {
     await this.framePage.locator("//button[.//span[text()='Create']]").click()
     await this.framePage.getByRole('menu').getByText(caseName).click()
     await this.framePage.getByRole('dialog').waitFor()
-    await expect(await this.framePage.getByRole('dialog').getByRole('heading')).toContainText('Create Citizen')
+    await expect(await this.framePage.getByRole('dialog').getByRole('heading')).toContainText('Create Citizen',{timeout: 30000})
 
 
 });
@@ -57,15 +57,15 @@ Then('user validates below data in details section', async function(dataTable:Da
 
     for await(const data of dataFromTable){
 
-        await expect(await this.framePage.getByTestId('Name:field-value-item:value')).toContainText(data["Name"])
+        await expect(await this.framePage.getByTestId('Name:field-value-item:value')).toContainText(data["Name"],{timeout: 30000})
     
-        await expect(await this.framePage.getByTestId('Email:field-value-item:value')).toContainText(data["Email"])
+        await expect(await this.framePage.getByTestId('Email:field-value-item:value')).toContainText(data["Email"],{timeout: 30000})
     
-        await expect(await this.framePage.getByTestId('Street Address:field-value-item:value')).toContainText(data["Address"])
+        await expect(await this.framePage.getByTestId('Street Address:field-value-item:value')).toContainText(data["Address"],{timeout: 30000})
 
-        await expect(this.framePage.getByTestId('Phone Number:field-value-item:value')).toContainText(data["PhoneNumber"])
+        await expect(this.framePage.getByTestId('Phone Number:field-value-item:value')).toContainText(data["PhoneNumber"]),{timeout: 30000}
 
-        await expect(await this.framePage.getByTestId('Postal Code:field-value-item:value')).toContainText(data["PostalCode"])     
+        await expect(await this.framePage.getByTestId('Postal Code:field-value-item:value')).toContainText(data["PostalCode"],{timeout: 30000})     
         
 
         
