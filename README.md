@@ -49,8 +49,8 @@ Ensure you have the following installed. Refer: https://nodejs.org/en/download/p
    git clone https://github.com/launchpadtests/launchpad-ui-tests.git
 
 2. Extract and open the project in the Visual Studio-Code (VS-Code)
-3. Open the terminal in VS-Code editor
-4. Ensure [`src\test\user-settings.json`](src/test/user-settings.json) file is updated with applicationurl, username and password
+3. Ensure [`src\test\user-settings.json`](src/test/user-settings.json) file is updated with applicationurl, username and password
+4. Open the terminal in VS-Code editor
 5. Install dependencies
     `npm i` to install the dependencies
     `npx playwright install` to install the browsers    
