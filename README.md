@@ -1,7 +1,7 @@
 # Launchpad UI Tests
 
 ## Overview
-This repository contains the automated UI tests for the Launchpad project. The tests are built using [TypeScript](https://www.typescriptlang.org/) and [Gherkin](https://cucumber.io/docs/gherkin/). It follows a behavior-driven development (BDD) approach. Cucumber is a popular behavior-driven development (BDD) tool that allows developers and stakeholders to collaborate on defining and testing application requirements in a human-readable format.
+This repository contains the [Playwright](https://playwright.dev/) automated UI tests for the Launchpad project. The tests are built using [TypeScript](https://www.typescriptlang.org/) and [Gherkin](https://cucumber.io/docs/gherkin/). It follows a behavior-driven development (BDD) approach. Cucumber is a popular behavior-driven development (BDD) tool that allows developers and stakeholders to collaborate on defining and testing application requirements in a human-readable format.
 
 There are 4 test scenarios in this project on "Civic Sync" application.
 1. [Verify "Inspections" landing page](src/test/features/landingPages.feature)
