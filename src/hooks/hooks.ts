@@ -5,6 +5,7 @@ import { pageConfig } from "./pageConfig";
 let page: Page;
 let browser: Browser;
 let context: BrowserContext;
+let config = require("../test/user-settings.json");
 
 const options: LaunchOptions = {
     headless: false,
@@ -15,7 +16,16 @@ const options: LaunchOptions = {
 setDefaultTimeout(5 * 60000);
 
 BeforeAll(async function () {
-    browser = await chromium.launch(options);
+    if(!config.applicationURL){
+        console.error("application url not specified in user-settings.json file")
+        throw new Error("provide application url");
+    }else if(!config.username || !config.password){
+        console.error("username or password is not specified in user-settings.json")
+        throw new Error("provide username and password");
+    }
+    else{
+        browser = await chromium.launch(options);
+    }
 });
 
 Before(async function () {
