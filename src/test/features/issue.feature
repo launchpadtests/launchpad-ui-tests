@@ -2,7 +2,7 @@ Feature: Create Issue
 
   Background:
     Given user navigates to the civic sync application
-    And   login to the application with username as "harish.ghorpade@in.pega.com" and password as "Install@123"
+    And   login to the application
     Then  verify that Civic sync web portal is launched
   
   Scenario: Create a new issue
