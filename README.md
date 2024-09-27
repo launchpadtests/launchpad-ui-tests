@@ -4,19 +4,19 @@
 This repository contains the automated UI tests for the Launchpad project. The tests are built using [TypeScript](https://www.typescriptlang.org/) and [Gherkin](https://cucumber.io/docs/gherkin/). It follows a behavior-driven development (BDD) approach. Cucumber is a popular behavior-driven development (BDD) tool that allows developers and stakeholders to collaborate on defining and testing application requirements in a human-readable format.
 
 There are 4 test scenarios in this project on "Civic Sync" application.
-1. Verify "Inspections" landing page
-2. Verify "Citizens" landing page
-3. Create "Issue" case
-4. Create "Citizen Registration" case
+1. [Verify "Inspections" landing page](src/test/features/landingPages.feature)
+2. [Verify "Citizens" landing page](src/test/features/landingPages.feature)
+3. [Create "Issue" case](src/test/features/issue.feature)
+4. [Create "Citizen Registration" case](src/test/features/citizenCase.feature)
 
 ## Video Demo
 Refer demo videos under [Demo-Videos directory] to understand the project structure and getting started with the setup and running the tests.
 
-1. Pre-requisite
-2. Repo Clone and VS Code Setup
-3. Project Structure and Executing the Tests
-4. Debug Failed Tests
-5. VS Code Editor and Cucumber Extension Settings
+1. [Pre-requisite](Demo-Videos/1.%20Pre-requisite.mp4) 
+2. [Repo Clone and VS Code Setup](Demo-Videos/2.%20Repo%20Clone%20and%20VS%20Code%20Setup.mp4)
+3. [Project Structure and Executing the Tests](Demo-Videos/3.%20Project%20Structure%20and%20Executing%20the%20Tests.mp4)
+4. [Debug Failed Tests](Demo-Videos/4.%20Debug%20Failed%20Tests.mp4)
+5. [VS Code Editor and Cucumber Extension Settings](Demo-Videos/5.%20VS%20Code%20Editor%20and%20Cucumber%20Extension%20Settings.mp4)
 
 ## Features
 
@@ -25,13 +25,12 @@ Refer demo videos under [Demo-Videos directory] to understand the project struct
 3. Scalable to use popular design patterns like Page Object Model (POM) 
 
 ## Project Structure
-1. `src\test\features` -> Write your features here
-2. `src\test\steps` -> Your step definitions goes here
-3. `src\hooks\hooks.ts` -> Browser setup and teardown logic
-4. `src\hooks\pageConfig.ts` -> Simple way to share the page objects to steps
-5. `package.json`: Manages dependencies and scripts
-6. `.gitignore`: Files to be ignored by Git
-7. `cucumber.json` -> cucumber configurations reqyired to run the tests
+1. [`src\test\features`](src/test/features/) -> Write your features here
+2. [`src\test\steps`](src/test/steps/) -> Your step definitions goes here
+3. [`src\hooks\hooks.ts`](src/hooks/hooks.ts) -> Browser setup and teardown logic
+4. [`src\hooks\pageConfig.ts`](src/hooks/pageConfig.ts) -> Simple way to share the page objects to steps
+5. [`package.json`](package.json) -> Manages dependencies and scripts
+6. [`cucumber.json`](cucumber.json) -> cucumber configurations reqyired to run the tests
 
 ## Getting Started
 
