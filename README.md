@@ -65,3 +65,8 @@ Ensure you have the following installed. Refer: https://nodejs.org/en/download/p
 4. Demo Videos: https://github.com/launchpadtests/launchpad-ui-tests/tree/main/Demo-Videos
 
 ### Sample Report
+1. Test Success Report
+![alt text](https://github.com/launchpadtests/launchpad-ui-tests/blob/main/Sample%20Report%20Screenshots/Success%20Report.jpg)
+
+2. Test Failure Report
+![alt text](https://github.com/launchpadtests/launchpad-ui-tests/blob/main/Sample%20Report%20Screenshots/Failed%20Test%20Report.jpg)
