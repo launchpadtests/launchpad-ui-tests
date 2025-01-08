@@ -22,7 +22,7 @@ Refer demo videos under [Demo-Videos directory] to understand the project struct
 
 1. Awesome report with screenshots for failed steps
 2. Parallel execution
-3. Scalable to use popular design patterns like Page Object Model (POM) 
+3. Scalable to use popular design patterns like Page Object Model (POM)
 
 ## Project Structure
 1. [`src\test\features`](src/test/features/) -> Write your features here
@@ -40,6 +40,7 @@ Ensure you have the following installed. Refer: https://nodejs.org/en/download/p
 - [Node.js] This project is built using node v22.6.0. 
 - [npm] This project is built using npm v10.8.2 
 - [git] Refer: https://git-scm.com/downloads
+- [vs-code editor] Download link: https://code.visualstudio.com/download. Download as per your operating system.
 
 [Note] To run Playwright tests with cucumber node.js version required is 18 || 20 || >=22.
 
@@ -49,10 +50,18 @@ Ensure you have the following installed. Refer: https://nodejs.org/en/download/p
    git clone https://github.com/launchpadtests/launchpad-ui-tests.git
 
 2. Extract and open the project in the Visual Studio-Code (VS-Code)
-3. Ensure [`src\test\user-settings.json`](src/test/user-settings.json) file is updated with applicationurl, username and password
+3. Ensure [`src\test\user-settings.json`](src/test/user-settings.json) file is updated with applicationurl(example: https://civicsync-civicsysqa.civicsys.io/), username and password. Ensure user has access to the end user portal.
 4. Open the terminal in VS-Code editor
 5. Install dependencies
     `npm i` to install the dependencies
-    `npx playwright install` to install the browsers    
+    `npx playwright install` to install the browsers
 6. Run the tests 
     `npm run test` to execute the tests
+	
+### Helpful Links
+1. Playwright: https://playwright.dev/
+2. TypeScript: https://www.typescriptlang.org/
+3. Gherkin: https://cucumber.io/docs/gherkin/
+4. Demo Videos: https://github.com/launchpadtests/launchpad-ui-tests/tree/main/Demo-Videos
+
+### Sample Report
