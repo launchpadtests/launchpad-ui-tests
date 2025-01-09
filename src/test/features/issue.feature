@@ -17,4 +17,3 @@ Feature: Create Issue
     And User submits the verify category
     And User submits the urgency
     And User submits the process issue
-    And User submits the feedback
