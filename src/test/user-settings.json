@@ -1,5 +1,9 @@
 {
     "applicationURL": "",
     "username": "",
-    "password": ""
+    "password": "",
+    "videoOptions": {
+        "allScenarios": false,
+        "failedScenarios": true
+    }
 }

@@ -51,11 +51,12 @@ Ensure you have the following installed. Refer: https://nodejs.org/en/download/p
 
 2. Extract and open the project in the Visual Studio-Code (VS-Code)
 3. Ensure [`src\test\user-settings.json`](src/test/user-settings.json) file is updated with applicationurl(example: https://civicsync-civicsysqa.civicsys.io/), username and password. Ensure user has access to the end user portal.
-4. Open the terminal in VS-Code editor
-5. Install dependencies
+4. To record the test executions use "videoOptions" in user-settings.json file. When allScenarios is true, videos are recorded for all scenarios regardless of the outcome. When failedScenarios is true, videos are recorded only for failed scenarios. Recorded videos are stored unded "test-videos" directory.
+5. Open the terminal in VS-Code editor
+6. Install dependencies
     `npm i` to install the dependencies
     `npx playwright install` to install the browsers
-6. Run the tests 
+7. Run the tests 
     `npm run test` to execute the tests
 	
 ### Helpful Links

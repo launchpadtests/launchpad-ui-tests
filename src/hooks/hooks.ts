@@ -1,6 +1,7 @@
-import { Before, After, BeforeAll, AfterAll, BeforeStep, AfterStep, Status, setDefaultTimeout } from "@cucumber/cucumber";
-import { Browser, BrowserContext, LaunchOptions, Page, chromium } from "@playwright/test";
+import { Before, After, BeforeAll, AfterAll, BeforeStep, AfterStep, Status, setDefaultTimeout, World } from "@cucumber/cucumber";
+import { Browser, BrowserContext, LaunchOptions, Page, chromium, defineConfig  } from "@playwright/test";
 import { pageConfig } from "./pageConfig";
+import { promises as fs } from "fs";
 
 let page: Page;
 let browser: Browser;
@@ -10,7 +11,7 @@ let config = require("../test/user-settings.json");
 const options: LaunchOptions = {
     headless: false,
     args: ["--start-maximized"],
-    slowMo: 400
+    slowMo: 400,
 }
 
 setDefaultTimeout(5 * 60000);
@@ -29,7 +30,11 @@ BeforeAll(async function () {
 });
 
 Before(async function () {
-    context = await browser.newContext({viewport: null});
+    if(config.videoOptions.allScenarios == true || config.videoOptions.failedScenarios == true){
+        context = await browser.newContext({viewport: null, recordVideo: {dir: './test-videos/'}});
+    }else{
+        context = await browser.newContext({viewport: null});
+    }
     context.setDefaultNavigationTimeout(3 * 60000);
     context.setDefaultTimeout(3 * 60000);
     page = await context.newPage();
@@ -45,9 +50,21 @@ AfterStep(async function({pickle, result}) {
     }
 });
 
-After(async function (){
+After(async function ({pickle, result}){
     await pageConfig.page.close();
     await context.close();
+    const videoName = await pageConfig.page.video().path();
+    
+    if((config.videoOptions.allScenarios == true && config.videoOptions.failedScenarios == true) || (config.videoOptions.allScenarios == true && config.videoOptions.failedScenarios == false)){
+        await fs.rename(videoName,'./test-videos/'+pickle.name+'.webm');
+    }else if(config.videoOptions.allScenarios == false && config.videoOptions.failedScenarios == true){
+        if(result?.status == Status.FAILED){
+            await fs.rename(videoName,'./test-videos/'+pickle.name+'.webm');
+        }else{
+            await fs.unlink(videoName);
+        }
+    }
+    
 });
 
 AfterAll(async function(){
