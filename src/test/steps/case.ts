@@ -42,8 +42,7 @@ When('user enters below data', async function(dataTable:DataTable) {
 });
 
 When('user submits the case', async function() {
-    await this.framePage.getByRole('button',{name:'Submit'}).click()
-
+    await this.framePage.getByTestId(':assignment-action-buttons:submit').click();
 })
 
 Then('user verifies the case status as {string}', async function(staus) {
